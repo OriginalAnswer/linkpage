@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap');
+@import url(./default.css);
+:root{
+    --fontColr:#000;
+    --fff:#fff;
+
+    --border1: 1px solid #000000;
+    --border2: 2px solid #c05959;
+    --border-radius-15: 15px;
+    --border-radius-25: 25px;
+    --border-radius-30: 30px;
+
+    --body-blur:blur(40px);
+
+    --main-backgroundColor:#fffffff5;
+    --cover-height:280px;
+    
+    --nav-height:calc(var(--search-height) + 10px);
+    --offer-backgroundColor:#000000;
+    --offer-fontColor:#fff;
+    --offer-fontSize: 13px;
+    --offer-width:120px;
+    --offer-height: calc(var(--search-height) - 3px);
+    
+    --search-height: 3rem;
+    --search-icon-border-radius: 50px;
+    --search-fontSize: 14px;
+    
+    --notice-fontSize: 14px;
+    --notice-backgroundColor: #f5ffcf;
+    --notice-ani-speed-first:35s;
+    --notice-ani-speed:calc(var(--notice-ani-speed-first)*2);
+    --notice-ani-dly: calc(var(--notice-ani-speed)/2);
+
+    --margin-gap:5px;
+
+    --link-img-size: calc(var(--link-height) - var(--link-padding) - var(--link-padding));
+    --link-height:76px;
+    --link-padding:5px;
+    --link-fontSize-pc: 1rem;
+    --link-fontSize-mobile: .9rem;
+
+    --tag-fontSize:10px;
+    --tag-height:21px;
+    --tag-border:1px solid #d8d8d8;
+}
+/* ============================= */
+body{
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    height: 100%;
+    overflow: scroll;
+    
+    background-image: url(background.jpg);
+    background-size: cover;
+    backdrop-filter: var(--body-blur);
+    -webkit-backdrop-filter: var(--body-blur);
+
+    display: flex;
+    justify-content: center;
+}
+/* ============================= */
+.notice-warpper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    display: block;
+    overflow-x: hidden;
+    background-color: var(--notice-backgroundColor);
+    font-weight: bold;
+    z-index: 10;
+    .notice{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 38px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: var(--notice-backgroundColor);
+        /* border: var(--border1); */
+        display: flex;
+        align-items: center;
+        
+        & span{
+            margin-left: 120px;
+            font-size: var(--notice-fontSize);
+        }
+    }
+    .notice-1{
+        transform: translateX(0%);
+        animation: infniteNotice1 var(--notice-ani-speed-first) linear forwards;
+        /* animation-play-state:paused */
+    }
+    .notice-2{
+        transform: translateX(100%);
+        animation: infniteNotice2 var(--notice-ani-speed) infinite linear ;
+        /* animation-delay: 5s; */
+    }
+    .notice-3{
+        transform: translateX(100%);
+        animation: infniteNotice2 var(--notice-ani-speed) infinite linear;
+        animation-delay: var(--notice-ani-dly);
+    }
+}
+@keyframes infniteNotice1 {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
+}
+@keyframes infniteNotice2 {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+/* ============================= */
+
+/* ============================= */

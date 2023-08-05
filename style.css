@@ -107,11 +107,19 @@
 }
 
 /* ============================= */
+body{
+
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+}
 .container{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
+    backdrop-filter: var(--body-blur);
+    -webkit-backdrop-filter: var(--body-blur);
     
     &::before{
         content: "";
@@ -139,6 +147,7 @@ header{
     /* border-radius: var(--border-radius-30); */
     background-color: var(--header-backgroundColor);
     backdrop-filter: var(--body-blur);
+    -webkit-backdrop-filter: var(--body-blur);
     /* opacity: 0; */
     transition: all .1s ease-in-out;
     z-index: 100;

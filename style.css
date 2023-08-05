@@ -3,19 +3,21 @@
 :root{
     --fontColr:#000;
     --fff:#fff;
-
+    
     --border-10: 1px solid #000000;
     --border-1f: 1px solid #ffffff;
     --border-radius-15: 15px;
     --border-radius-25: 25px;
     --border-radius-30: 30px;
-
+    
     --box-height:60px;
     --body-blur:blur(40px);
-
+    
     --main-backgroundColor:#fffffff5;
     --cover-height:350px;
     
+    --grap-color:#ececec;
+
     --nav-height:calc(var(--search-height) + 10px);
     --offer-backgroundColor:#000000;
     --offer-fontColor:#fff;
@@ -33,15 +35,15 @@
     --notice-ani-speed-first:35s;
     --notice-ani-speed:calc(var(--notice-ani-speed-first)*2);
     --notice-ani-dly: calc(var(--notice-ani-speed)/2);
-
+    
     --margin-gap:5px;
-
+    
     --link-img-size: calc(var(--link-height) - var(--link-padding) - var(--link-padding));
     --link-height:76px;
     --link-padding:5px;
     --link-fontSize-pc: 1rem;
     --link-fontSize-mobile: .9rem;
-
+    
     --tag-fontSize:10px;
     --tag-height:21px;
     --tag-border:1px solid #d8d8d8;
@@ -202,9 +204,21 @@ header{
 }
 /* ============================= */
 .content-header{
-    padding: 10px 5px;
+    padding: 3px 5px 10px 5px;
     margin-bottom: 10px;
     width: 100%;
+    .grap{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        & div{
+            width: 40px;
+            height: 4px;
+            background-color: var(--grap-color);
+            border-radius: var(--border-radius-30);
+        }
+    }
     .board{
         display: flex;
         align-items: center;

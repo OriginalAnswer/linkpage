@@ -19,6 +19,8 @@
     --cover-height:350px;
     
     --grap-color:#ececec;
+    --btn-focus-backgroundColor-0: rgb(0, 0, 0);
+    --btn-focus-backgroundColor-1: rgb(255, 165, 55);
 
     --nav-height:calc(var(--search-height) + 10px);
     --offer-backgroundColor:#000000;
@@ -51,6 +53,7 @@
     --tag-border:1px solid #d8d8d8;
 
     --header-backgroundColor:#ffffff74;
+
 }
 /* ============================= */
 .notice-warpper{
@@ -165,10 +168,14 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        border: var(--border-10);
+        /* border: var(--border-10); */
         border-radius: var(--border-radius-30);
         height: calc(var(--box-height)/2) ;
         width: calc(var(--box-height)/2) ;
+        &:hover{
+            color:var(--fff);
+            background-color: var(--btn-focus-backgroundColor-0);
+        }
     }
 }
 /* ============================= */
@@ -267,7 +274,7 @@ header{
             font-size: var(--offer-fontSize);
             color: var(--offer-fontColor);
             &:hover{
-                background-color:rgb(255, 165, 55);
+                background-color:var(--btn-focus-backgroundColor-1);
                 color:#ffffff;
             }
         

@@ -354,5 +354,13 @@ header{
     }
 }
 /* ============================= */
-    
-    
+footer{
+    margin: 30px 20px 50px 20px;
+    >p{
+        font-size: .9em;
+        font-weight: bold;
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+}

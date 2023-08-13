@@ -65,7 +65,7 @@
                         <label for="input-search" class="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </label>
-                        <input id="input-search" type="text" placeholder="제품 번호 또는 이름 입력">
+                        <input id="input-search" type="text" placeholder="제품 번호 또는 이름 입력" onkeyup="search(this.value)">
                         <a href="#" class="offer">
                             <i class="fa-regular fa-envelope"></i>
                             <span>
@@ -75,17 +75,17 @@
                     </div>
                 </div>
                 <div class="links">
-                    <a href="https://link.coupang.com/a/6ERj3" class="link" id="2" data-name="2">
-                    <div class="link-l">
-                        <img src="./item img/2.png" alt="product thumbnail" class="link-l thumbnail"></img>
-                    </div>
-                    <div class="link-r">
-                        <div class="tag-warpper">
-                            <div class="tag tag1">혹시</div>
-                            <div class="tag tag2">모르니</div>
-                            <div class="tag tag3" style="background-color:rgb(255, 227, 171);">사두자</div>
+                    <a href="https://link.coupang.com/a/6ERj3" class="link" id="2" data-name="2 호신용 스프레이">
+                        <div class="link-l">
+                            <img src="./item img/2.png" alt="product thumbnail" class="link-l thumbnail"></img>
                         </div>
-                        <span class="item-name">2. 호신용 스프레이</s>
+                        <div class="link-r">
+                            <div class="tag-warpper">
+                                <div class="tag tag1">혹시</div>
+                                <div class="tag tag2">모르니</div>
+                                <div class="tag tag3" style="background-color:rgb(255, 227, 171);">사두자</div>
+                            </div>
+                            <span class="item-name">2. 호신용 스프레이</s>
                         </div>
                     </a>
                    
@@ -103,6 +103,7 @@
                         </div>
                     </a>
                 </div>
+                <div class="currentview dpnone"></div>
                 <!-- 최하단 푸터 -->
                 <footer>
                     <div class="dashline"></div>
@@ -113,6 +114,7 @@
         </div>
     </div>
     <script src="header.js"></script>
+    <script src="search.js"></script>
 <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>
 </html>

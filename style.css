@@ -364,3 +364,8 @@ footer{
         text-align: center;
     }
 }
+/* ============================= */
+.currentview{
+    width: 100%;
+    min-height: 300px;
+}
